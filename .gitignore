@@ -1,0 +1,61 @@
+# OSX
+#
+**/.DS_Store
+
+# Xcode
+#
+SimpleCart/build/
+SimpleCart/*.pbxuser
+SimpleCart/!default.pbxuser
+SimpleCart/*.mode1v3
+SimpleCart/!default.mode1v3
+SimpleCart/*.mode2v3
+SimpleCart/!default.mode2v3
+SimpleCart/*.perspectivev3
+SimpleCart/!default.perspectivev3
+SimpleCart/xcuserdata
+SimpleCart/*.xccheckout
+SimpleCart/*.moved-aside
+SimpleCart/DerivedData
+SimpleCart/*.hmap
+SimpleCart/*.ipa
+SimpleCart/*.xcuserstate
+
+# Android/IntelliJ
+#
+SimpleCart/build/
+SimpleCart/.idea
+SimpleCart/.gradle
+SimpleCart/local.properties
+SimpleCart/*.iml
+SimpleCart/*.hprof
+
+# node.js
+#
+SimpleCart/node_modules/
+SimpleCart/npm-debug.log
+SimpleCart/yarn-error.log
+
+# BUCK
+SimpleCart/buck-out/
+SimpleCart/\.buckd/
+SimpleCart/*.keystore
+SimpleCart/!debug.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+SimpleCart/*/fastlane/report.xml
+SimpleCart/*/fastlane/Preview.html
+SimpleCart/*/fastlane/screenshots
+
+# Bundle artifact
+SimpleCart/*.jsbundle
+
+# Ruby / CocoaPods
+SimpleCart/ios/Pods/
+SimpleCart/vendor/bundle/
