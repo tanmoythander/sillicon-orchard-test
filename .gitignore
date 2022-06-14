@@ -4,22 +4,22 @@
 
 # Xcode
 #
-SimpleCart/build/
-SimpleCart/*.pbxuser
-SimpleCart/!default.pbxuser
-SimpleCart/*.mode1v3
-SimpleCart/!default.mode1v3
-SimpleCart/*.mode2v3
-SimpleCart/!default.mode2v3
-SimpleCart/*.perspectivev3
-SimpleCart/!default.perspectivev3
-SimpleCart/xcuserdata
-SimpleCart/*.xccheckout
-SimpleCart/*.moved-aside
-SimpleCart/DerivedData
-SimpleCart/*.hmap
-SimpleCart/*.ipa
-SimpleCart/*.xcuserstate
+SimpleCart/ios/build/
+SimpleCart/ios/*.pbxuser
+SimpleCart/ios/!default.pbxuser
+SimpleCart/ios/*.mode1v3
+SimpleCart/ios/!default.mode1v3
+SimpleCart/ios/*.mode2v3
+SimpleCart/ios/!default.mode2v3
+SimpleCart/ios/*.perspectivev3
+SimpleCart/ios/!default.perspectivev3
+SimpleCart/ios/xcuserdata
+SimpleCart/ios/*.xccheckout
+SimpleCart/ios/*.moved-aside
+SimpleCart/ios/DerivedData
+SimpleCart/ios/*.hmap
+SimpleCart/ios/*.ipa
+SimpleCart/ios/*.xcuserstate
 
 # Android/IntelliJ
 #
