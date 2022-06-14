@@ -23,12 +23,12 @@ SimpleCart/*.xcuserstate
 
 # Android/IntelliJ
 #
-SimpleCart/build/
-SimpleCart/.idea
-SimpleCart/.gradle
-SimpleCart/local.properties
-SimpleCart/*.iml
-SimpleCart/*.hprof
+SimpleCart/android/app/build/
+SimpleCart/android/.idea
+SimpleCart/android/.gradle
+SimpleCart/android/local.properties
+SimpleCart/android/*.iml
+SimpleCart/android/*.hprof
 
 # node.js
 #
