@@ -7,7 +7,7 @@ import item6 from './../../assets/images/item6.jpeg'
 import item7 from './../../assets/images/item7.jpeg'
 import item8 from './../../assets/images/item8.jpeg'
 import item9 from './../../assets/images/item9.jpeg'
-import { ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, ADD_SHIPPING } from './../actions/action-types/cart-actions'
+import { ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, ADD_SHIPPING, REMOVE_ALL } from './../actions/action-types/cart-actions'
 
 const initState = {
     items: [
@@ -95,6 +95,13 @@ const cartReducer = (state = initState, action) => {
                 total: newTotal
             }
         }
+
+    }
+    if (action.type === REMOVE_ALL) {
+        
+            return {
+                ...initState
+            }
 
     }
 

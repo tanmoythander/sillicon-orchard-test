@@ -9,7 +9,7 @@ import {
 } from '@ui-kitten/components';
 import { connect } from 'react-redux';
 
-import { removeItem, addQuantity, subtractQuantity } from '../../redux/actions/cartActions';
+import { removeItem, addQuantity, subtractQuantity, removeAll } from '../../redux/actions/cartActions';
 
 import styles from './styles';
 
@@ -17,7 +17,12 @@ const MinusIcon = (style = {}) => <Icon {...style} name='minus' />;
 const PlusIcon = (style = {}) => <Icon {...style} name='plus' />;
 const CloseIcon = (style) => <Icon {...style} name='close' />;
 
-const Cart = ({ items, total, removeItem, addQuantity, subtractQuantity }) => {
+const Cart = ({
+	items, total,
+	removeItem, addQuantity,
+	subtractQuantity, removeAll,
+	navigation
+}) => {
 
 	const renderItemFooter = (item) => {
 		return (
@@ -77,7 +82,13 @@ const Cart = ({ items, total, removeItem, addQuantity, subtractQuantity }) => {
 					numColumns={1}
 					renderItem={renderProductItem}
 				/> : <Text>Your cart is empty</Text>}
-				{items.length ? <Button style={styles.floatingButton}>
+				{items.length ? <Button
+					style={styles.floatingButton}
+					onPress={() => {
+						removeAll();
+						navigation.navigate('Products')
+					}}
+				>
 					<Text appearance='hint' category='c1'>Check Out (৳ {total})</Text>
 				</Button> : null}
 			</SafeAreaView>
@@ -95,7 +106,8 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		removeItem: (id) => { dispatch(removeItem(id)) },
 		addQuantity: (id) => { dispatch(addQuantity(id)) },
-		subtractQuantity: (id) => { dispatch(subtractQuantity(id)) }
+		subtractQuantity: (id) => { dispatch(subtractQuantity(id)) },
+		removeAll: () => { dispatch(removeAll()) }
 	}
 }
 

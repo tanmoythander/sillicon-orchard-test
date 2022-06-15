@@ -1,5 +1,5 @@
 
-import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY} from './action-types/cart-actions'
+import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY, REMOVE_ALL} from './action-types/cart-actions'
 
 //add cart action
 export const addToCart= (id)=>{
@@ -26,6 +26,13 @@ export const subtractQuantity=(id)=>{
 export const addQuantity=(id)=>{
     return{
         type: ADD_QUANTITY,
+        id
+    }
+}
+//remove action
+export const removeAll=()=>{
+    return{
+        type: REMOVE_ALL,
         id
     }
 }
