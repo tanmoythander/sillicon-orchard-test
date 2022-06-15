@@ -1,38 +1,37 @@
-import React from 'react';
+import React from 'react'
+import { View, SafeAreaView, ImageBackground } from 'react-native'
 import {
-	View,
-	SafeAreaView,
-	ImageBackground
-} from 'react-native';
-import {
-	List, Card,
-	Text, Button,
-	Icon, Popover, Layout,
+	List,
+	Card,
+	Text,
+	Button,
+	Icon,
+	Popover,
+	Layout,
 	TopNavigationAction
-} from '@ui-kitten/components';
-import { connect } from 'react-redux';
+} from '@ui-kitten/components'
+import { connect } from 'react-redux'
 
-import { addToCart } from '../../redux/actions/cartActions';
+import { addToCart } from '../../redux/actions/cartActions'
 
-import styles from './styles';
+import styles from './styles'
 
 const CartIcon = (style = {}) => (
 	<Icon {...style} name='shopping-cart-outline' />
-);
+)
 
 const Home = ({ items, addToCart, navigation }) => {
+	const [popoverVisible, setPopoverVisible] = React.useState(false)
 
-	const [popoverVisible, setPopoverVisible] = React.useState(false);
-
-	const onItemCartPress = (index) => {
+	const onItemCartPress = index => {
 		addToCart(index)
 		setPopoverVisible(true)
 		setTimeout(() => {
 			setPopoverVisible(false)
 		}, 1000)
-	};
+	}
 
-	const renderItemFooter = (item) => {
+	const renderItemFooter = item => {
 		return (
 			<View style={styles.itemFooter}>
 				<Text category='s1'>৳ {item.price}</Text>
@@ -43,12 +42,12 @@ const Home = ({ items, addToCart, navigation }) => {
 					onPress={() => onItemCartPress(item.id)}
 				/>
 			</View>
-		);
-	};
+		)
+	}
 
-	const renderItemHeader = (item) => (
+	const renderItemHeader = item => (
 		<ImageBackground style={styles.itemHeader} source={item.img} />
-	);
+	)
 
 	const renderProductItem = ({ item }) => (
 		<Card
@@ -61,14 +60,17 @@ const Home = ({ items, addToCart, navigation }) => {
 				{item.desc}
 			</Text>
 		</Card>
-	);
+	)
 
 	const CartAction = () => {
 		return (
-			<TopNavigationAction icon={CartIcon} onPress={() => {
-				navigation.navigate('Cart');
-			}} />
-		);
+			<TopNavigationAction
+				icon={CartIcon}
+				onPress={() => {
+					navigation.navigate('Cart')
+				}}
+			/>
+		)
 	}
 
 	return (
@@ -83,7 +85,8 @@ const Home = ({ items, addToCart, navigation }) => {
 				<Popover
 					visible={popoverVisible}
 					anchor={() => <View></View>}
-					onBackdropPress={() => setPopoverVisible(false)}>
+					onBackdropPress={() => setPopoverVisible(false)}
+				>
 					<Layout style={styles.popoverContent}>
 						<Text>Item added to cart</Text>
 					</Layout>
@@ -93,18 +96,20 @@ const Home = ({ items, addToCart, navigation }) => {
 				</View>
 			</SafeAreaView>
 		</React.Fragment>
-	);
-};
-
-const mapStateToProps = (state) => {
-	return {
-		items: state.items,
-	}
-}
-const mapDispatchToProps = (dispatch) => {
-	return {
-		addToCart: (id) => { dispatch(addToCart(id)) }
-	}
+	)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+const mapStateToProps = state => {
+	return {
+		items: state.items
+	}
+}
+const mapDispatchToProps = dispatch => {
+	return {
+		addToCart: id => {
+			dispatch(addToCart(id))
+		}
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

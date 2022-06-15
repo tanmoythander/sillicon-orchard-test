@@ -1,4 +1,4 @@
-import { Dimensions } from 'react-native' 
+import { Dimensions } from 'react-native'
 
 const styles = {
 	productList: {
@@ -19,32 +19,32 @@ const styles = {
 	},
 	itemName: {
 		flex: 3,
-		justifyContent: "center",
-		alignItems: "center",
+		justifyContent: 'center',
+		alignItems: 'center'
 	},
 	itemFooter: {
-		flexDirection: "row",
+		flexDirection: 'row'
 	},
 	footerFirstCol: {
 		flex: 1,
-		padding: 10,
+		padding: 10
 	},
 	footerSecondCol: {
 		flex: 1,
 		flexDirection: 'row',
-		justifyContent: "space-between",
-		alignItems: "center",
-		padding: 5,
+		justifyContent: 'space-between',
+		alignItems: 'center',
+		padding: 5
 	},
 	iconButton: {
 		paddingHorizontal: 0,
-		margin: 0,
+		margin: 0
 	},
 	productItem: {
 		flex: 1,
 		margin: 8,
-		maxWidth: Dimensions.get("window").width - 20,
-		backgroundColor: "background-basic-color-1",
+		maxWidth: Dimensions.get('window').width - 20,
+		backgroundColor: 'background-basic-color-1'
 	},
 	floatingButton: {
 		width: '100%',
@@ -52,8 +52,8 @@ const styles = {
 		backgroundColor: '#ccc',
 		alignItems: 'center',
 		justifyContent: 'center',
-		border: 'none',
-	},
-};
+		border: 'none'
+	}
+}
 
-export default styles;
+export default styles
