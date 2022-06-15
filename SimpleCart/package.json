@@ -5,18 +5,22 @@
   "scripts": {
     "android": "npx react-native run-android",
     "ios": "npx react-native run-ios",
-    "start": "react-native start",
+    "start": "watchman watch-del-all && npx react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint .",
     "postinstall": "cd ios && pod install && cd .."
   },
   "dependencies": {
+    "@eva-design/eva": "^2.1.1",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
+    "@ui-kitten/components": "^5.1.2",
+    "@ui-kitten/eva-icons": "^5.1.2",
     "react": "17.0.2",
     "react-native": "0.68.2",
     "react-native-safe-area-context": "^4.3.1",
     "react-native-screens": "^3.13.1",
+    "react-native-svg": "^12.3.0",
     "react-redux": "^8.0.2",
     "redux": "^4.2.0"
   },

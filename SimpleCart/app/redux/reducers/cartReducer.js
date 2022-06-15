@@ -1,26 +1,25 @@
-import Item1 from './../../assets/images/item1.jpeg'
-import Item2 from './../../assets/images/item2.jpeg'
-import Item3 from './../../assets/images/item3.jpeg'
-import Item4 from './../../assets/images/item4.jpeg'
-import Item5 from './../../assets/images/item5.jpeg'
-import Item6 from './../../assets/images/item6.jpeg'
-import Item7 from './../../assets/images/item7.jpeg'
-import Item8 from './../../assets/images/item8.jpeg'
-import Item9 from './../../assets/images/item9.jpeg'
+import item1 from './../../assets/images/item1.jpeg'
+import item2 from './../../assets/images/item2.jpeg'
+import item3 from './../../assets/images/item3.jpeg'
+import item4 from './../../assets/images/item4.jpeg'
+import item5 from './../../assets/images/item5.jpeg'
+import item6 from './../../assets/images/item6.jpeg'
+import item7 from './../../assets/images/item7.jpeg'
+import item8 from './../../assets/images/item8.jpeg'
+import item9 from './../../assets/images/item9.jpeg'
 import { ADD_TO_CART, REMOVE_ITEM, SUB_QUANTITY, ADD_QUANTITY, ADD_SHIPPING } from './../actions/action-types/cart-actions'
-
 
 const initState = {
     items: [
-        { id: 1, title: 'Winter body', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price: 110, img: Item1 },
-        { id: 2, title: 'Adidas', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price: 80, img: Item2 },
-        { id: 3, title: 'Vans', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price: 120, img: Item3 },
-        { id: 4, title: 'White', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price: 260, img: Item4 },
-        { id: 5, title: 'Cropped-sho', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price: 160, img: Item5 },
-        { id: 6, title: 'Blues', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price: 90, img: Item6 },
-        { id: 7, title: 'White', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price: 260, img: Item7 },
-        { id: 8, title: 'Cropped-sho', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price: 160, img: Item8 },
-        { id: 9, title: 'Blues', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.", price: 90, img: Item9 }
+        { id: 1, title: 'Dell Inspiron 15 3511', desc: "Intel Core i3 1115G4 15.6 Inch FHD Display Carbon Black Laptop", price: 54250, img: item1 },
+        { id: 2, title: 'Acer Nitro 7 AN715-51', desc: "Intel core i5 9300H 15.6 Inch FHD IPS Display Black Gaming Laptop", price: 95480, img: item2 },
+        { id: 3, title: 'Asus VivoBook 14 K413EQ', desc: "Intel 1165G7 14 Inch FHD WV Display Hearty Gold Laptop", price: 109590, img: item3 },
+        { id: 4, title: 'Asus TUF Gaming F15 FX506HC', desc: "Intel 11400H 15.6 Inch FHD WV Display Graphite Black", price: 111760, img: item4 },
+        { id: 5, title: 'Asus D515DA', desc: "AMD Ryzen 3 3250U 15.6 Inch FHD Display Win 11 Slate Grey Laptop", price: 53710, img: item5 },
+        { id: 6, title: 'Apple MacBook Air Late 2020', desc: "Apple M1 Chip 13.3 Inch Retina Display Touch ID Gold MacBook", price: 117720, img: item6 },
+        { id: 7, title: 'Apple MacBook Pro Late 2020', desc: "Apple M1 Chip 8GB Ram 256DB SSD 13.3 Inch Retina Display Silver Laptop", price: 130000, img: item7 },
+        { id: 8, title: 'Apple MacBook Pro Late 2021', desc: "Apple M1 Pro 16.2 Inch Liquid Retina XDR Display Silver Laptop", price: 264740, img: item8 },
+        { id: 9, title: 'Apple MacBook Pro Late 2021', desc: "Apple M1 Max (10-Core) Chip 14.2 Inch Liquid Retina XDR Display Space Gray Laptop", price: 379750, img: item9 }
     ],
     addedItems: [],
     total: 0
